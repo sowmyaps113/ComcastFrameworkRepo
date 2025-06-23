@@ -29,6 +29,9 @@ public class HomePage {
 	@FindBy(linkText="Sign Out")
 	private WebElement signOutLink;
 
+	@FindBy(linkText="Products")
+	private WebElement productLink;
+	
 	public WebElement getOrgLink() {
 		return orgLink;
 	}
@@ -41,6 +44,10 @@ public class HomePage {
 		return campaignLink;
 	}
 	
+	public WebElement getProductLink() {
+		return productLink;
+	}
+
 	public HomePage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
